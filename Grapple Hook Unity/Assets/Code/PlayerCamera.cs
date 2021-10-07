@@ -36,6 +36,7 @@ public class PlayerCamera : MonoBehaviour
         camTransform = cam.transform;
         rotation = cam.transform.eulerAngles;
         shakeTimer = shakeDuration;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     //No physics here.
