@@ -44,15 +44,16 @@ public class GoopLauncher : MonoBehaviour
         {
             if (activeGrappleGoopOne != null && activeGrappleGoopTwo != null)
             {
-                Destroy(activeGrappleGoopOne.gameObject);
-                Destroy(activeGrappleGoopTwo.gameObject);
+                //Destroy(activeGrappleGoopOne.gameObject);
+                //Destroy(activeGrappleGoopTwo.gameObject);
                 activeGrappleGoopOne = null;
                 activeGrappleGoopTwo = null;
             }
-            else
-            {
-                LaunchGoop(GoopType.grappleTwo);
-            }
+            //else
+            //{
+            //    LaunchGoop(GoopType.grappleTwo);
+            //}
+            LaunchGoop(GoopType.grappleTwo);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))

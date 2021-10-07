@@ -13,7 +13,6 @@ public class DoubleGrappleGoop : Goop
     {
         shouldGrapple = true;
     }
-
     public override void HandleStick()
     {
         parentTransform = transform.parent.transform;
@@ -27,14 +26,15 @@ public class DoubleGrappleGoop : Goop
     {
         if (shouldGrapple && parentTransform.GetComponent<Rigidbody>() && linkedGoop != null)
         {
-            print("move");
-            parentTransform.position = Vector3.MoveTowards(parentTransform.position, linkedGoop.transform.position, grappleStrength * Time.deltaTime);
             if (Vector3.Distance(parentTransform.transform.position, linkedGoop.transform.position) < 1)
             {
-                GoopLauncher.Instance.activeGrappleGoopOne = null;
-                GoopLauncher.Instance.activeGrappleGoopTwo = null;
-                Destroy(gameObject);
-                Destroy(linkedGoop.gameObject);
+                parentTransform.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                parentTransform.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            }
+            else
+            {
+
+                parentTransform.position = Vector3.MoveTowards(parentTransform.position, linkedGoop.transform.position, grappleStrength * Time.deltaTime);
             }
         }
     }
