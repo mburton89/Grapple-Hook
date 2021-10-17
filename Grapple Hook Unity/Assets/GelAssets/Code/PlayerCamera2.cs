@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerCamera : MonoBehaviour
+public class PlayerCamera2 : MonoBehaviour
 {
     Vector3 originalPosition;
 

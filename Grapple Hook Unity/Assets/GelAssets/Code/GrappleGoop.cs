@@ -15,8 +15,8 @@ public class GrappleGoop : Goop
 
     public override void Activate()
     {
-        objectToMove = FindObjectOfType<PlayerMovement>().transform;
-        objectToMove.GetComponent<PlayerMovement>().enabled = false;
+        objectToMove = FindObjectOfType<PlayerMovement2>().transform;
+        objectToMove.GetComponent<PlayerMovement2>().enabled = false;
         objectToMove.GetComponent<Rigidbody>().velocity = Vector3.zero;
         objectToMove.GetComponent<Rigidbody>().useGravity = false;
         shouldGrapple = true;
@@ -24,8 +24,8 @@ public class GrappleGoop : Goop
 
     public void Deactivate()
     {
-        objectToMove = FindObjectOfType<PlayerMovement>().transform;
-        objectToMove.GetComponent<PlayerMovement>().enabled = true;
+        objectToMove = FindObjectOfType<PlayerMovement2>().transform;
+        objectToMove.GetComponent<PlayerMovement2>().enabled = true;
         objectToMove.GetComponent<Rigidbody>().useGravity = true;
         shouldGrapple = false;
         Destroy(this);

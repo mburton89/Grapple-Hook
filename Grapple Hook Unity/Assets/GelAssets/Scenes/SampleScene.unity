@@ -1243,7 +1243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659694360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5, y: 9, z: 14}
+  m_LocalPosition: {x: 11, y: 9, z: 14}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2419,7 +2419,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -2451,6 +2451,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1875764230}
+  - {fileID: 2006520664}
   m_Father: {fileID: 1175079647}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3831,6 +3832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchForce: 4
   spawnPoint: {fileID: 1875764230}
+  lineSpawnPoint: {fileID: 2006520664}
   explosiveGoopPrefab: {fileID: 35603036531073639, guid: 57aea5ac9f1924348a81ae99056c085e, type: 3}
   grappleOneGoopPrefab: {fileID: 4421819591166360944, guid: cac7f28c203a32648b5d58790bb599b4, type: 3}
   grappleTwoGoopPrefab: {fileID: 7397268077492807054, guid: 5179b0c3b12be334098f2305b29ce12a, type: 3}
@@ -4620,6 +4622,36 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2006520663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2006520664}
+  m_Layer: 0
+  m_Name: LineSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2006520664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006520663}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091570007
 GameObject:
   m_ObjectHideFlags: 0

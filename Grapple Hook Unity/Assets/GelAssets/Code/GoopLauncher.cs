@@ -16,6 +16,7 @@ public class GoopLauncher : MonoBehaviour
     public float launchForce = 15f;
 
     public Transform spawnPoint;
+    public Transform lineSpawnPoint;
     public GameObject explosiveGoopPrefab;
     public GameObject grappleOneGoopPrefab;
     public GameObject grappleTwoGoopPrefab;
@@ -36,11 +37,16 @@ public class GoopLauncher : MonoBehaviour
 
     void Update()
     {
-        
+
         if (activeGoop != null)
         {
-            lineRenderer.SetPosition(0, spawnPoint.position);
+            lineRenderer.enabled = true;
+            lineRenderer.SetPosition(0, lineSpawnPoint.position);
             lineRenderer.SetPosition(1, activeGoop.transform.position);
+        }
+        else
+        {
+            lineRenderer.enabled = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
